@@ -1,0 +1,4 @@
+This project is a simple Rails app that makes ajax calls that return javascript invoking the Google Visualization API.  It exists to highlight a case in which the AreaChart fails to render in Firefox, even though it does in Safari (and there are no javascript errors, etc).
+
+The test_controller.rb has a remote_function tag that invokes the js_data method.  On this page, there is a div called "replaceme" which is where the graph should show up.  The js_data method returns javascript that fills out a DataTable object and invokes the AreaChart's draw method on the "replaceme" div.  In Safari, a chart shows up as expected.  In Firefox, no errors occur, but the gviz call returns an iframe with an empty body.  Hopefully a wonderful person from the Google Visualization API list can help me understand why.
+

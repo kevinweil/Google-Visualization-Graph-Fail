@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Graph Example &raquo; <%= @controller.controller_name.capitalize %></title>
+        <%= javascript_include_tag "application" %>
+		<%= javascript_include_tag "jquery" %>
+		<%= javascript_include_tag "jquery-ui" %>
+		<%= javascript_include_tag "datejs" %>
+		<%= javascript_include_tag "jrails" %>
+		<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+		<script type="text/javascript">
+			 google.load("visualization", "1", {packages:["annotatedtimeline", "areachart", "linechart", "geomap", "columnchart", "table", "imagesparkline"]});
+		</script>
+    </head>
+
+    <body style="background:#f6f6f6 top center repeat-y;">
+		<div id="main-content">
+        	<%= yield %>
+        </div>
+    </body>
+</html>

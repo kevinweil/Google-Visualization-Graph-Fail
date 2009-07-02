@@ -1,0 +1,20 @@
+<p> The graph should be below me. </p>
+
+<div id="outer">
+	<div class="content" style="width:800;">
+	    <div style="float: right; width: 780px;">
+	        <div id="replaceme" class="" style="width:780px;height:500px;">
+			        <%= image_tag "rotation.gif", :class => "rotation" %>
+			        <% javascript_tag do -%>
+			            <%= remote_function :url => { :action => "js_data" }, :update => "replaceme" %>
+			        <% end -%>
+			</div>
+		</div>
+	    <div style="clear: both;">
+	    </div>
+	</div>
+	
+  
+</div>
+
+<p> The graph should be above me. </p>

@@ -2,3 +2,12 @@ This project is a simple Rails app that makes ajax calls that return javascript 
 
 The test_controller.rb has a remote_function tag that invokes the js_data method.  On this page, there is a div called "replaceme" which is where the graph should show up.  The js_data method returns javascript that fills out a DataTable object and invokes the AreaChart's draw method on the "replaceme" div.  In Safari, a chart shows up as expected.  In Firefox, no errors occur, but the gviz call returns an iframe with an empty body.  Hopefully a wonderful person from the Google Visualization API list can help me understand why.
 
+To get started, clone the repo (and make sure you have Ruby and Ruby on Rails installed). From within the new directory, type
+
+script/server -p 3456
+
+Then in your web browser, go to
+
+http://localhost:3456.
+
+You should see a page with a line of text, then a graph, then another line of text.  Firefox on Mac shows a line of text, a big blank space, and another line of text.
